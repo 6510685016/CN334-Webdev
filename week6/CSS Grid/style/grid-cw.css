@@ -1,0 +1,76 @@
+.container {
+    display: grid;
+    grid-template-columns: 250px 449px 269px 200px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+            "pic1 a1 a1 a1"
+            "space2 pic2 a2-1 a2-2"
+            "a3 a3 a3 pic3"
+            "footer footer footer footer";
+    background-color: #ffffff;
+    grid-gap: 10px;
+}
+
+.pic-lukky {
+    grid-area: pic1;
+}
+.a-lukky {
+    grid-area: a1;
+    background-color: #EAF2F5;
+}
+
+.space {
+    grid-area: space2;
+    background-color: #F7ECB5;
+}
+.pic-iyla {
+    grid-area: pic2;
+}
+.a-iyla {
+    grid-area: a2-1;
+    background-color: #E3D2D2;
+}
+.a-sum {
+    grid-area: a2-2;
+    background-color: #F7ECB5;
+}
+
+.pic-simba {
+    grid-area: pic3;
+}
+.a-simba {
+    grid-area: a3;
+    background-color: #C9E2B3;
+}
+
+article {
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 0;
+}
+
+h2 {
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'Open Sasn', 'sans-serif';
+    line-height: 19.5px;
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    grid-area: footer;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    background-color: #000000;
+}
+/*#EAF2F5*/
+/*#F7ECB5*/
+/*#E3D2D2*/
+/*#C9E2B3*/
+/*#000000*/

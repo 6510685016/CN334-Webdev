@@ -1,0 +1,20 @@
+:root {
+    --main-coler: coral;
+}
+h1 {
+    color: var(--main-coler);
+    border-bottom: 2px solid var(--main-coler);
+}
+p {
+    font-size: large;
+    font-family: sans-serif;
+    margin-left: 100px;
+}
+h2 {
+    color: var(--main-coler);
+    margin-left: 100px;
+}
+img {
+    float: right;
+    margin: 0 12px;
+}
