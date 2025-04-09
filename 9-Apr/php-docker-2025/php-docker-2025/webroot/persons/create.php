@@ -14,7 +14,9 @@
     <div class="container">
         <h1>Add a new person</h1>
         <form action="index.php" method="post">
+            <!-- 1 - create user -->
             <input type="hidden" name="add" value="1">
+
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter name" class="form-control" required>

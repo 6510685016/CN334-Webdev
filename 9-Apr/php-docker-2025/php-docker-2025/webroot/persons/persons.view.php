@@ -21,6 +21,7 @@
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
+        <th>Action</th>
     </tr>
     </thead>
     <?php foreach ($persons as $person): ?>
@@ -29,6 +30,14 @@
             <td> <?= $person["name"]." ".$person["surname"];?> </td>
             <td> <?= $person["email"];?> </td>
             <td> <?= $person["phone"];?> </td>
+            <td>
+                <a href="update.php?id=<?= $person["id"];?>" class="btn-action btn-edit">
+                    Update
+                </a>
+                <a href="delete.php?id=<?= $person["id"];?>" class="btn-action btn-delete">
+                    Delete
+                </a>
+            </td>
         </tr>
     <?php endforeach; ?>
 </table>
