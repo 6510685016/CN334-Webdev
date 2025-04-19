@@ -1,0 +1,143 @@
+.data-display {
+    margin-bottom: 2rem;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td {
+    padding: 0.3rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.info-table th {
+    width: 100px;
+    color: #555;
+    font-weight: 500;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.container .container {
+    margin: 0 0 1rem;
+}
+
+.container .actionbar {
+    text-align: center;
+}
+
+h2 {
+    color: #4a90e2;  /* Darker sky blue */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.delete-message {
+    color: #495057;
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    line-height: 1.5;
+}
+
+.person-info {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.person-info p {
+    margin: 0.5rem 0;
+    color: #495057;
+}
+
+.person-info strong {
+    color: #4a90e2;  /* Darker sky blue */
+    font-weight: 500;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-update {
+    background-color: #a0e6af;
+    color: #2d3f48;
+}
+
+.btn-update:hover {
+    background-color: #7ad28d;
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background-color: #ffb4a2;  /* Pastel red */
+    color: #2d3748;
+}
+
+.btn-danger:hover {
+    background-color: #e5989b;
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.btn-secondary:hover {
+    background-color: #dee2e6;
+}
+
+.warning-text {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.warning-text-secondary {
+    text-align: center;
+}
+
+.icon-warning {
+    text-align: center;
+    font-size: 5rem;
+    color: gold;
+    margin-bottom: 0;
+}

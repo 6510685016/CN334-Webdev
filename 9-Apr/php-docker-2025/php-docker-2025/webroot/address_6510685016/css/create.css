@@ -1,0 +1,49 @@
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 25%;
+    padding-top: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group:nth-child(3) .gender label {
+    display: inline-block;
+    width: auto;
+    padding-top: 0.5rem;
+    margin-right: 1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-control {
+    display: inline-block;
+    width: 70%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+.form-group:nth-child(6) .form-control {
+    min-height: 6rem;
+}
+
+
+.form-control:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
