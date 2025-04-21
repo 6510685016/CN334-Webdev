@@ -36,7 +36,7 @@
 
             <div class="form-actions">
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="reset" class="btn-secondary">Reset</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
             </div>
         </form>
     </div>
