@@ -1,0 +1,213 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+.page-title {
+    text-align: center;
+    color: #4a90e2;  /* Darker sky blue */
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.data-table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.data-table thead {
+    background-color: #7cb9e8;  /* Medium sky blue */
+}
+
+.data-table th {
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 1.25rem 1rem;
+    text-align: left;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.data-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f1f3f5;
+    color: #495057;
+    font-size: 0.95rem;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.action-column {
+    white-space: nowrap;
+    text-align: center;
+    min-width: 160px;
+}
+
+.btn-action {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin: 0 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.btn-edit {
+    background-color: #95d5b2;  /* Pastel green */
+    color: #2d3748;
+}
+
+.btn-edit:hover {
+    background-color: #74c69d;
+    transform: translateY(-1px);
+}
+
+.btn-delete {
+    background-color: #ffb4a2;  /* Pastel red */
+    color: #2d3748;
+}
+
+.btn-delete:hover {
+    background-color: #e5989b;
+    transform: translateY(-1px);
+}
+
+.add-new {
+    display: inline-block;
+    background-color: #7cb9e8;  /* Medium sky blue */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 0 5% 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.add-new:hover {
+    background-color: #4a90e2;  /* Darker sky blue */
+    transform: translateY(-1px);
+}
+
+/* Table specific styles */
+.data-table td:first-child {  /* ID column */
+    font-weight: 500;
+    color: #4a90e2;  /* Darker sky blue */
+    width: 60px;
+}
+
+.data-table td:nth-child(2) {  /* Name column */
+    font-weight: 500;
+    min-width: 200px;
+}
+
+.data-table td:nth-child(3) {  /* Email column */
+    color: #4a90e2;  /* Darker sky blue */
+    text-decoration: none;
+    min-width: 200px;
+}
+
+/* Alert styles for flash messages */
+.alert {
+    padding: 18px 20px;
+    margin-bottom: 25px;
+    border-left: 5px solid transparent;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-radius: 12px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: slideDown 0.4s ease-out;
+}
+
+.alert::before {
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.alert-success {
+    color: #2d6a4f;
+    background-color: #d8f3dc;
+    border-color: #40916c;
+}
+
+.alert-success::before {
+    content: "✓";
+    color: #40916c;
+}
+
+.alert-danger {
+    color: #9d0208;
+    background-color: #ffccd5;
+    border-color: #e5383b;
+}
+
+.alert-danger::before {
+    content: "✕";
+    color: #e5383b;
+}
+
+.alert-warning {
+    color: #9c6644;
+    background-color: #ffe8d6;
+    border-color: #bc6c25;
+}
+
+.alert-warning::before {
+    content: "!";
+    color: #bc6c25;
+}
+
+.alert-info {
+    color: #1a759f;
+    background-color: #d0f4f8;
+    border-color: #4cc9f0;
+}
+
+.alert-info::before {
+    content: "i";
+    color: #4cc9f0;
+}
+
+#flash-messages {
+    margin-bottom: 30px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
