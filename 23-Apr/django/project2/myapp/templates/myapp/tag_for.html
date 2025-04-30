@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href='{% url "about" %}'> About </a><br>
+    <a href='{% url "tag_if" %}'> tag_if </a><br>
+    <a href='{% url "tag_for" %}'> tag_for </a><br>
+    <a href='{% url "test" %}'> Test </a><br>
+    <hr>
+
+    {% with a=10 b='Hello' c=scores %}
+        {{ a }} <br>
+        {{ b }} <br>
+        {% for name, score in c.items %}
+            {{ forloop.counter }}. {{ name }} : {{score}} <br>
+        {% endfor %}
+    <hr>
+    {% endwith %}
+    <hr>
+
+    {% lorem  4 w%}
+    <hr>
+    
+    {% lorem  1 p%}
+    <hr>
+
+    {# jejejjeejfiejiojcpjwejiw #}
+    {% comment %}
+        efkwemw
+        weifojwf
+        heifwkpo
+    {% endcomment %}
+    <hr>
+
+    {% comment %}
+    {% for num in range1_5 %}
+        {{ num }}<br>
+    {% endfor %}
+    <hr>
+    {% endcomment %}
+
+    {% for _ in range1_5 %}
+        {% cycle 'One' 'Two' %}
+    {% endfor %}
+    <hr>
+
+    {% for num in range1_5 %}
+    <span style="color: {% cycle 'red' 'blue' %};"> 
+        {{ num }}
+    </span>
+    {% endfor %}
+    <hr>
+
+    {% for num in range1_5 %}
+    <span style="color: {% cycle 'green' 'red' 'blue' %};"> 
+        {{ forloop.counter }}. {{ num }}<br>
+    </span>
+    {% endfor %}
+    <hr>
+
+    {% for color in colors %}
+        {{ color }}<br>
+    {% endfor %}
+    <hr>
+
+    {% for name, score in scores.items %}
+        {{ forloop.counter }}. {{ name }} : {{score}} <br>
+    {% endfor %}
+    <hr>
+
+    {% for name in scores.keys %}
+        {{ name }} <br>
+    {% endfor %}
+    <hr>
+
+    {% for score in scores.values %}
+        {{score}} <br>
+    {% endfor %}
+    <hr>
+
+    Score greater than 9: <br>
+    {% for name, score in scores.items %}
+        {% if score > 9 %}
+            {{ name }} : {{score}} <br>
+        {% endif %}
+    {% endfor %}
+    <hr>
+
+    {% for num in empty %}
+        {{ num }}<br>
+        {% empty %}
+        empty na
+    {% endfor %}
+    <hr>
+</body>
+</html>

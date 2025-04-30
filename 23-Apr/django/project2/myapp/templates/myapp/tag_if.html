@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href='{% url "tag_for" %}'> tag_for </a><br>
+    {% if integer1 == 1 %}
+        integer1 is {{ integer1 }}<br>
+    {% endif %}
+
+    {% if integer1 > 0 %}
+        {{ integer1 }} is greater than zero.<br>
+    {% endif %}
+    
+    {% if flag %}
+        flag is {{ flag }}<br>
+    {% endif %}
+
+    {% if 4 not in numbers %}
+        4 is not in {{ numbers }}<br>
+    {% endif %}
+
+    {% if numbers.0 == 1 %}
+        {{ numbers.0 }} is 1<br>
+    {% endif %}
+
+    {% if numbers.0 == 0 %}
+        {{ numbers.0 }} is 0<br>
+    {% endif %}
+
+</body>
+</html>

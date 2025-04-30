@@ -25,5 +25,19 @@ def test(request):
     }
     return render(request, 'myapp/test.html', data)
 
-def plus(request):
-    return render(request, "myapp/plus.html")
+def tag_if(request):
+    data = {
+        'integer1' : 1,
+        'flag' : True,
+        'numbers' : [1, 2, 3],
+    }
+    return render(request, 'myapp/tag_if.html', data)
+
+def tag_for(request):
+    data = {
+        'range1_5' : range(1,6),
+        'colors' : ['red', 'green', 'blue'],
+        'scores' : {'somsak' : 8, 'Adisak' : 10},
+        'empty' : [],
+    }
+    return render(request, 'myapp/tag_for.html', data)
