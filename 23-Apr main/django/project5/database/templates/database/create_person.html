@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Create Person{% endblock title %}
+
+{% block content %}
+
+    {% if not form.is_valid %}
+        <h1>Create Person</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+            {{ form.as_table }}
+            </table>
+            <button type="submit">Create</button>
+        </form>
+    {% else %}
+        <h1>Person Created</h1>
+        <p> Person 
+            {{ form.instance.first_name }} 
+            {{ form.instance.last_name }} 
+            created successfully!
+        </p>
+    {% endif %}
+
+{% endblock content %}

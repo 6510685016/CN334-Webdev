@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Update Person{% endblock title %}
+
+{% block content %}
+
+    <h1>Update Person</h1>
+    {% if not form.is_valid %}
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <button type="submit">Update</button>
+        </form>
+    {% else %}
+        <p> Person 
+            {{ form.instance.first_name }} 
+            {{ form.instance.last_name }} 
+            updated successfully!
+        </p>
+    {% endif %}
+    <p>
+        <a href="{% url 'read_person' %}">Back to Person List</a>
+    </p>
+
+{% endblock content %}

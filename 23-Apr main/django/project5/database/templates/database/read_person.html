@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+{% block title %}Person Details{% endblock title %}
+{% block style %}
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 0.5em;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+{% endblock style %}
+
+{% block content %}
+
+    <h1>Person Details</h1>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>10% tax</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        {% for person in persons %}
+        <tr>
+            <td> {{ forloop.counter }} </td>
+            <td> {{ person.first_name }} {{ person.last_name }} </td>
+            <td> {{ person.salary|intcomma }} </td>
+            <td> {{ person.tax|intcomma }} </td>
+            <td>
+                <a href="{% url 'update_person' id=person.id %}">
+                    <span class="material-symbols-outlined">edit</span>
+                </a>
+            </td>
+            <td>
+                <a href="{% url 'delete_person' id=person.id %}">
+                    <span class="material-symbols-outlined">delete</span>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+
+{% endblock content %}
